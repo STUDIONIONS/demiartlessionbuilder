@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 			incrementalUpdates: true
 		},
 		ftp_enabled: false,
-		modernizr_enabled: false,
+		modernizr_enabled: true,
 	},
 	message = "ProjectSoft";
 	
@@ -57,38 +57,17 @@ module.exports = function(grunt) {
 			dist: {
 				"crawl": false,
 				"customTests": [],
-				"dest": "<%= globalConfig.tmp %>/modernizr-output.js",
+				"dest": "<%= globalConfig.assets %>/<%= globalConfig.js %>/modernizr.js",
 				"tests": [
-					"pointerevents",
-					"svg",
-					"touchevents",
-					"video",
-					"objectfit",
-					"cssvhunit",
-					"cssvmaxunit",
-					"cssvminunit",
-					"cssvwunit",
-					"videoautoplay",
-					"videoloop"
+					"json",
+					"filereader",
+					"localstorage",
+					"sessionstorage"
 				],
 				"options": [
-					"domPrefixes",
-					"prefixes",
-					"addTest",
-					"atRule",
-					"hasEvent",
-					"mq",
-					"prefixed",
-					"prefixedCSS",
-					"prefixedCSSValue",
-					"testAllProps",
-					"testProp",
-					"testStyles",
-					"html5printshiv",
-					"html5shiv",
 					"setClasses"
 				],
-				"uglify": false
+				"uglify": true
 			}
 		},
 		uglify : {
@@ -98,7 +77,6 @@ module.exports = function(grunt) {
 			main: {
 				files: {
 					'<%= globalConfig.assets %>/<%= globalConfig.js %>/main.js': [
-						'<%= globalConfig.jq %>/dist/jquery.js',
 						'<%= globalConfig.dev %>/<%= globalConfig.js %>/main.js'
 					]
 				}
