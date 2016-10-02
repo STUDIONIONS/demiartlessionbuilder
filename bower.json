@@ -1,0 +1,22 @@
+{
+	"name": "demiartlessionbuilder",
+	"description": "",
+	"main": "package.json",
+	"authors": [
+		"ProjectSoft <projectsoft2009@yandex.ru>"
+	],
+	"license": "ISC",
+	"homepage": "",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"jquery": "^1.12.4",
+		"jquery-ui": "latest"
+	}
+}
