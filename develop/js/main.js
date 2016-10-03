@@ -3,7 +3,7 @@ if(Modernizr.json && Modernizr.filereader && Modernizr.sessionstorage && Moderni
 		var $txtinput = $("#text"),
 			$btnRepl = $("#rpl");
 		$txtinput.on("change input", function(){
-
+			
 		});
 		$btnRepl.on("click", function(e){
 			var txt = $txtinput.val(),

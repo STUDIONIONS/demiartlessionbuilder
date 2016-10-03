@@ -195,14 +195,18 @@ module.exports = function(grunt) {
 				options: {
 					title: "<%= pkg.name %> v<%= pkg.version %>",
 					message: 'Запуск',
-					image: __dirname+'\\notify.png'
+					image: __dirname+'\\notify.png',
+					success: false,
+					duration: 3
 				}
 			},
 			done: {
 				options: { 
 					title: "<%= pkg.name %> v<%= pkg.version %>",
 					message: "Успешно Завершено",
-					image: __dirname+'\\notify.png'
+					image: __dirname+'\\notify.png',
+					success: false,
+					duration: 3
 				}
 			}
 		}
